@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import LoadingSpinner from "./components/LoadingSpinner";
-
+import thumbnail from "./thumbnail.jpg";
 const App = () => {
   const [surveyCode, setSurveyCode] = useState("");
   const [loading, setLoading] = useState(false);
@@ -38,6 +38,9 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center gap-3">
+      <div className="max-w-md">
+        <img src={thumbnail} alt="thumbnail" />
+      </div>
       <div className="bg-white p-6 mt-10 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold text-center mb-6">
           Get your discount code in just 1 click 😉
