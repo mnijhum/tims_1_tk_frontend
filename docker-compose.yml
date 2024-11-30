@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  tims-backend:
+    image: mnijhum/tims_1_tk_backend:0.1
+    restart: always
+    ports:
+      - 5000:5000
+
+  tims-frontend:
+    image: mnijhum/tims_1_tk_frontend:0.1
+    restart: always
+    ports:
+      - 3000:80
+    environment:
+      - NODE_ENV=production
